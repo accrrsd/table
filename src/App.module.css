@@ -1,0 +1,151 @@
+.wrapper {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1232px;
+
+  padding: 23px 78px;
+}
+
+/* search bar */
+.searchBarWrapper {
+  position: relative;
+  max-width: 631px;
+}
+
+.searchBar {
+  max-width: 631px;
+  height: 52px;
+  padding: 10px;
+  background: #5a5c66;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  color: white;
+  border: none;
+}
+
+.searchBar::placeholder {
+  color: #b2b7bf;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.276px;
+}
+
+.searchBarIcon {
+  background-image: url('./images/search.svg');
+  width: 21px;
+  height: 21px;
+  background-size: cover;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* table */
+
+.arrow {
+  width: 10px;
+  height: 6px;
+  background-image: url('./images/arrow.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.arrowActive {
+  transform: rotate(180deg);
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1077px;
+  border: 1px solid #e3e6ec;
+}
+
+.tableHeadersWrapper {
+  display: flex;
+  background: #474955;
+  box-shadow: 0px 4px 27px 0px rgba(230, 231, 234, 0.78);
+  padding: 15px;
+  align-items: center;
+  height: 54px;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+
+  color: #fff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 137.687%;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.tableRow {
+  display: flex;
+}
+
+.tableRowContent {
+  padding: 8px;
+  border: 1px solid #e3e6ec;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* bottom */
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.numbersWrapper {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.navButtonBase {
+  cursor: pointer;
+  color: #474955;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33.045px;
+  outline: none;
+  user-select: none;
+}
+
+.navButtonBase:hover {
+  color: greenyellow;
+}
+
+.navButton {
+  composes: navButtonBase;
+  background: none;
+  border: none;
+}
+
+.pageNumber {
+  composes: navButtonBase;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.activePageNumber {
+  color: #7ebc3c;
+}
