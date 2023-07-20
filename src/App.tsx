@@ -100,7 +100,7 @@ function App() {
         </thead>
         <tbody>
           {variableTableData.map((cell, i) => {
-            const start = (CELL_LIMIT_ON_PAGE * Number(currentPage) ?? 1) - CELL_LIMIT_ON_PAGE
+            const start = CELL_LIMIT_ON_PAGE * (Number(currentPage) || 1) - CELL_LIMIT_ON_PAGE
             const end = start + CELL_LIMIT_ON_PAGE
             if (i < start || i + 1 > end) return null
             return (
