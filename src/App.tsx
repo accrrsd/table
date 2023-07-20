@@ -28,9 +28,17 @@ function App() {
   const [reverseSorting, setReverseSorting] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
 
+  // update data if pending
   useEffect(() => {
     if (!isSearching && variableTableData.length === 0) setVariableTableData(tableData)
   }, [tableData, variableTableData, isSearching])
+
+  // limit currentPage by numbers of page
+  useEffect(() => {
+    if (Number(currentPage) > numbersOfPage) {
+      setSearchParams({ id: String(Number(numbersOfPage || 1)) })
+    }
+  }, [currentPage, numbersOfPage, setSearchParams])
 
   const changeSorting = (by: typeof activeSorting) => {
     const prevActive = activeSorting
